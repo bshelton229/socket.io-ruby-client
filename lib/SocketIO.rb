@@ -1,3 +1,4 @@
+require 'socketio-client_version'
 require 'web_socket'
 require 'rest_client'
 require 'json'
@@ -18,7 +19,7 @@ module SocketIO
   end
 
   class Client
-    VERSION = "0.0.2"
+    VERSION = SocketIO::VERSION
 
     [:INT, :TERM].each do |sig|
       Signal.trap(sig) do
